@@ -73,13 +73,14 @@ static void align_satellite_with_gnss_system(enum gnss_system sv_system,
 {
 	switch (sv_system) {
 	case GNSS_SYSTEM_GPS:
+    case GNSS_SYSTEM_GPS_L5:
 		if (satellite->prn > GNSS_NMEA0183_GSV_PRN_GPS_RANGE) {
 			satellite->system = GNSS_SYSTEM_SBAS;
 			satellite->prn += GNSS_NMEA0183_GSV_PRN_SBAS_OFFSET;
 			break;
 		}
 
-		satellite->system = GNSS_SYSTEM_GPS;
+		satellite->system = sv_system;
 		break;
 
 	case GNSS_SYSTEM_GLONASS:
@@ -88,8 +89,9 @@ static void align_satellite_with_gnss_system(enum gnss_system sv_system,
 		break;
 
 	case GNSS_SYSTEM_GALILEO:
-		satellite->system = GNSS_SYSTEM_GALILEO;
-		break;
+    case GNSS_SYSTEM_GALILEO_L5:
+	    satellite->system = sv_system;
+	    break;
 
 	case GNSS_SYSTEM_BEIDOU:
 		satellite->system = GNSS_SYSTEM_BEIDOU;
@@ -97,8 +99,9 @@ static void align_satellite_with_gnss_system(enum gnss_system sv_system,
 		break;
 
 	case GNSS_SYSTEM_QZSS:
-		satellite->system = GNSS_SYSTEM_QZSS;
-		break;
+    case GNSS_SYSTEM_QZSS_L5:
+	    satellite->system = sv_system;
+	    break;
 
 	case GNSS_SYSTEM_IRNSS:
 	case GNSS_SYSTEM_IMES:

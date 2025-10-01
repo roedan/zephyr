@@ -88,6 +88,12 @@ enum gnss_system {
 	GNSS_SYSTEM_SBAS = BIT(6),
 	/** Indoor Messaging System (IMES) */
 	GNSS_SYSTEM_IMES = BIT(7),
+	/** Global Positioning System (GPS) L5 */
+	GNSS_SYSTEM_GPS_L5 = BIT(8),
+	/** Galileo L5 */
+	GNSS_SYSTEM_GALILEO_L5 = BIT(9),
+	/** Quasi-Zenith Satellite System (QZSS) L5 */
+	GNSS_SYSTEM_QZSS_L5 = BIT(10),
 };
 
 /** Type storing bitmask of GNSS systems */
