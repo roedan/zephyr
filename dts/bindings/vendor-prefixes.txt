@@ -593,6 +593,7 @@ riot	Embest RIoT
 riscv	RISC-V Foundation
 rockchip	Fuzhou Rockchip Electronics Co., Ltd
 rocktech	ROCKTECH DISPLAYS LIMITED
+roedan	Roedan Embedded Systems Limited
 rohm	ROHM Semiconductor Co., Ltd
 ronbo	Ronbo Electronics
 ronoth	Ronoth
